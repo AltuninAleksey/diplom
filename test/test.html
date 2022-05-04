@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="">
+
+            <input type="checkbox" id="inomarka">Иномарка<br>
+            <input type="checkbox" id="filter">Замены фильтра<br>
+
+            <div class="text_result" id="text_result">150рублей</div>
+        </form>
+
+
+    <script>
+
+
+        const handleOnChange = (e) => {
+            console.log(e.target.checked)
+        }
+
+        let inomarka = document.getElementById("inomarka")
+        let filter = document.getElementById("filter")
+        let result = document.getElementById("text_result")
+
+        let radio= document.querySelectorAll("input");
+        //radio.forEach(i => i.checked ? alert("сережа не вменяемый") : '')
+        
+        radio.forEach(i => i.addEventListener('change', (event) => {
+
+            
+            handleOnChange(event)
+        }))
+            
+     
+
+    </script>
+</body>
+</html>
